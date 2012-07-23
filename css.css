@@ -1,0 +1,137 @@
+input, select, textarea{
+width: 400px
+}
+body{
+overflow-x:hidden
+}
+.zopt{
+width: 150px
+}
+#shareme {
+    width: 350px;
+    height: 60px;
+}
+#shareme .box {
+    float: left;
+    margin: 5% 8% 0 8%;
+    width: 100%;
+}
+#shareme .box a { color: #404040 }
+#shareme .box a:hover { text-decoration: none }
+#shareme .count {
+    font-weight: bold;
+    font-size: 20px;
+    border-right: 2px solid #57b8d1;
+    line-height: 15px;
+    padding-right: 10px;
+}
+#shareme .share {
+    margin-left: 10px;
+    font-size: 22px;
+    width: 250px;
+}
+#shareme .buttons {
+    position: absolute;
+    width: 320px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#shareme .button {
+    float: left;
+    max-width: 50px;
+    margin: 0 10px 0 0;
+}
+#shareme .facebook { margin: 0 8px 0 0 }
+#shareme .twitter { margin: 0 18px 0 0 }
+#shareme .linkedin { margin: 0 20px 0 0 }
+@-webkit-keyframes bounce { 
+	0% { margin: -40% auto }
+	60% { margin: 6% auto }
+	80% { margin: 3% auto }
+	100% { margin: 5% auto }
+}
+#github {
+    right: -65px;
+    height: 30px;
+    top: 40px;
+    position: absolute;
+    text-decoration: none;
+    width: 250px;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    font-family: 'Maven Pro', Verdana, Arial;
+    color: white;
+    z-index: 9000
+}
+#github span {
+    background: #000;
+    font-size: 14px;
+    left: 0;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    -moz-box-shadow: rgba(0,0,0,0.2) 1px 1px 10px;
+    -webkit-box-shadow: rgba(0,0,0,0.2) 1px 1px 10px;
+    -o-box-shadow: rgba(0,0,0,0.2) 1px 1px 10px;
+    box-shadow: rgba(0,0,0,0.2) 1px 1px 10px;
+    -moz-transition-property: opacity;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -moz-transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+#github span:last-child {
+    background: #0066cc;
+    color: #000;
+    opacity: 0;
+}
+#github:hover span:first-child { opacity: 0 }
+#github:hover span:last-child { opacity: 1 }
+@media all and (-webkit-transform-3d) { 
+	#github span {
+	    opacity: 1 !important;
+	    -webkit-backface-visibility: hidden;
+	    -webkit-transition: -webkit-transform 1s;
+	}
+	#github span:last-child { -webkit-transform: rotateX(180deg) }
+	#github:hover span:first-child { -webkit-transform: rotateX(180deg) }
+	#github:hover span:last-child { -webkit-transform: rotateX(360deg) }
+}
+			details, summary { display: block; border: 1px solid #666; padding: 1em; }
+			/* Apply a pointer cursor and style the background upon hover to indicate <summary> is a clickable element. */
+			/* These styles can be applied regardless of whether the fallback is needed */
+			summary { cursor: pointer; }
+			summary:hover, summary:focus { background: #ddd; }
+
+			/* The following styles are not really needed, since the jQuery script takes care of hiding/displaying the elements. */
+			/* However, we’re still gonna use CSS as well to prevent FOUC in browsers that understand these selectors. */
+			/* Remember: by default (and probably most of the time), the contents of the <details> element are hidden. */
+			.no-details details > * { display: none; }
+			/* This doesn’t work very well in Firefox 3.6.x */
+			/* .no-details details[open] > * { display: block; } */
+			/* The following doesn’t toggle correctly in WebKit:
+			.no-details details > summary:before { content: '? '; }
+			.no-details details[open] > summary:before { content: '? '; }
+			*/
+			/* And yes, it should really be ::before, but that doesn’t work in IE8 */
+			.no-details details > summary:before { float: left; width: 20px; content: '? '; }
+			.no-details details.open > summary:before { content: '? '; }
+			/* For IE6 and IE7, who don’t support generated content, you could use padding-left + a background image instead */
+			/* I really couldn’t be bothered though. */
+			/*
+			.no-details details > summary { padding-left: 20px; background: url(img/arrow-sprite.png) no-repeat 0 0; }
+			.no-details details.open > summary { background-position: 0 -20px; }
+			*/
+			/* Make sure summary remains visible */
+			.no-details details summary { display: block; }
